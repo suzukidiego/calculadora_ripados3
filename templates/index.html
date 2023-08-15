@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  .container img {
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  h1 {
+    color: #0c5195;
+    font-size: 18px;
+  }
+  h2 {
+    color: #0a314c;
+    font-size: 13px;
+  }
+  form {
+    margin-bottom: 20px;
+  }
+  input {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #909090
+  }
+  select {
+    display: block;
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #808080  
+  }
+  button {
+    background-color: #0c5195;
+    width: 94%;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: #0a314c;
+  }
+  .result {
+    background-color: #0c5195;
+    color: white;
+    line-height: 1.5;    
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13px
+  }
+
+  .custom-button {
+    display: block;
+    width: 90%;
+    padding: 10px;
+    background-color: #648e53;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .custom-button:hover {
+    background-color: #4a703b;
+  }
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://voceconstroi.fbitsstatic.net/media/testeira-quantas-reguas-eu-preciso2-600x250.jpg" alt="Como calcular tamanho de painel ripado">
+
+    <h1>Calculadora de Painel Ripado</h1>
+    
+    
+    <h2>Quais as medidas da parede (em metros)</h2>
+    <form action="/" method="post" >
+      <input type="number" name="comprimento" step=".01" placeholder="Comprimento em metros" required>
+      <input type="number" name="altura" step=".01" placeholder="Altura em metros" required>
+      
+      <h2>Será instalado em que sentido</h2>
+      <select name="direção" >
+        <option value="vertical">Vertical</option>
+        <option value="horizontal">Horizontal</option>
+        
+      </select>
+      <select name="linha" >
+        <option value="Ripado interno">Ripado interno</option>
+        <option value="Ripado externo">Ripado externo</option>
+      </select>
+      
+      <button type="submit" class="button">CALCULAR</button>
+    </form>
+    
+    <h2>Resultado:</h2>
+    <p class="result">São necessárias {{ result }} réguas, já considerando 10% de desperdício.</p>
+    
+    <a href="https://www.voceconstroi.com.br/revestimentos/paineis-ripados" target="_blank" class="custom-button">Confira as cores de ripados no site!</a>
+  </div>
+</body>
+</html>
